@@ -40,23 +40,4 @@ export const DEFAULT_CONFIG: Omit<TabRefreshConfig, "tabId" | "url"> = {
     lastRefreshedAt: null
 };
 
-export function formatTime(ms: number | null): string {
-    if (!ms) return "--:--:--";
-    const date = new Date(ms);
-    return date.toLocaleTimeString("zh-TW", { hour12: false });
-}
-
-export function formatSecondsToTime(seconds: number): string {
-    const s = Math.max(0, Math.floor(seconds));
-    const m = Math.floor(s / 60);
-    const remS = s % 60;
-    if (m === 0) {
-        return `${remS}s`;
-    }
-    const remM = m % 60;
-    const h = Math.floor(m / 60);
-    if (h === 0) {
-        return `${String(remM).padStart(2, "0")}:${String(remS).padStart(2, "0")}`;
-    }
-    return `${String(h).padStart(2, "0")}:${String(remM).padStart(2, "0")}:${String(remS).padStart(2, "0")}`;
-}
+export { formatTime, formatSecondsToTime, computeNextInterval, validateInterval } from "./utils/timer";

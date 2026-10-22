@@ -1,4 +1,4 @@
-import { DEFAULT_CONFIG, type TabRefreshConfig } from "./types";
+import { DEFAULT_CONFIG, computeNextInterval, type TabRefreshConfig } from "./types";
 
 // 輔助函式：取得指定 tabId 的設定
 async function getTabConfig(tabId: number, url = ""): Promise<TabRefreshConfig> {
@@ -19,12 +19,7 @@ async function saveTabConfig(config: TabRefreshConfig): Promise<void> {
     await chrome.storage.local.set({ [`tab_${config.tabId}`]: config });
 }
 
-// 計算下一次刷新的秒數（包含隨機抖動）
-function computeNextInterval(baseInterval: number, jitter: number): number {
-    if (jitter <= 0) return Math.max(1, baseInterval);
-    const offset = Math.floor(Math.random() * (jitter * 2 + 1)) - jitter;
-    return Math.max(1, baseInterval + offset);
-}
+
 
 // 設置 Chrome Alarms 作為背景防休眠備援
 function setupAlarm(tabId: number, delayInSeconds: number) {
@@ -236,3 +231,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     return false;
 });
+
