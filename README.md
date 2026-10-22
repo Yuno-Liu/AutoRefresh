@@ -45,13 +45,29 @@
 
 ## 🚀 安裝說明
 
-### 載入未封裝項目（開發者模式）
+### 方式一：從 GitHub Releases 下載（推薦，開箱即用）
 
-1. 開啟 Chrome 瀏覽器，在網址列輸入 `chrome://extensions/` 並按 Enter。
-2. 開啟右上角的「**開發人員模式**」（Developer mode）。
-3. 點擊左上角的「**載入未封裝項目**」（Load unpacked）。
-4. 選擇本專案編譯後的目錄：`dist` 資料夾。
-5. 安裝完成後，即可在 Chrome 工具列看見「網頁自動刷新器」圖示，建議點擊圖釘圖示將其固定在工具列以便隨時操作。
+此方式無需安裝 Node.js 或進行專案編譯，最簡單快速：
+
+1. 前往本專案的 [Releases 頁面](https://github.com/Yuno-Liu/AutoRefresh/releases)。
+2. 下載最新發布的 `AutoRefresh-v*.zip` 壓縮檔。
+3. 解壓縮至電腦任意資料夾。
+4. 開啟 Chrome 瀏覽器，在網址列輸入 `chrome://extensions/` 並按 Enter。
+5. 開啟右上角的「**開發人員模式**」（Developer mode）。
+6. 點擊左上角的「**載入未封裝項目**」（Load unpacked）。
+7. 選擇解壓縮後的 `dist` 資料夾即可完成安裝。
+8. 點擊 Chrome 工具列右上方的拼圖圖示，將「⏱️ 網頁自動刷新器」圖示固定在工具列以便隨時操作。
+
+### 方式二：從原始碼自行編譯（開發者用）
+
+1. 克隆專案並安裝相依套件：
+   ```bash
+   git clone https://github.com/Yuno-Liu/AutoRefresh.git
+   cd AutoRefresh
+   npm install
+   npm run build
+   ```
+2. 開啟 Chrome `chrome://extensions/`，啟用「開發人員模式」，點選「載入未封裝項目」，選擇 `dist` 資料夾即可完成安裝。
 
 ---
 
@@ -118,4 +134,5 @@ AutoRefresh/
 ## 📜 授權協議 (License)
 
 本專案採用 [MIT License](LICENSE) 授權。
+
 
