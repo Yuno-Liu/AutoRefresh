@@ -1,5 +1,5 @@
 {
-    "name": "autorefresh-ts",
+    "name": "autorefresh",
     "version": "1.0.0",
     "description": "網頁自訂秒數自動刷新工具 - TypeScript 版本",
     "scripts": {
@@ -30,3 +30,4 @@
     "author": "",
     "license": "MIT"
 }
+

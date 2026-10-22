@@ -1,6 +1,6 @@
-# ⏱️ 網頁自動刷新器 (Auto Refresh - TS)
+# ⏱️ 網頁自動刷新器 (Auto Refresh)
 
-[![GitHub License](https://img.shields.io/github/license/Yuno-Liu/AutoRefresh-TS)](LICENSE)
+[![GitHub License](https://img.shields.io/github/license/Yuno-Liu/AutoRefresh)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Manifest V3](https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/intro/)
 [![esbuild](https://img.shields.io/badge/Bundled%20with-esbuild-FFCF00?logo=esbuild&logoColor=black)](https://esbuild.github.io/)
@@ -63,8 +63,8 @@
 
 1. 複製專案與安裝相依套件：
    ```bash
-   git clone https://github.com/Yuno-Liu/AutoRefresh-TS.git
-   cd AutoRefresh-TS
+   git clone https://github.com/Yuno-Liu/AutoRefresh.git
+   cd AutoRefresh
    npm install
    ```
 
@@ -93,7 +93,7 @@
 ## 📂 目錄結構
 
 ```
-AutoRefresh-TS/
+AutoRefresh/
 ├── dist/                     # 編譯輸出目錄（載入此資料夾至 Chrome）
 │   ├── background.js
 │   ├── content.js
@@ -118,3 +118,4 @@ AutoRefresh-TS/
 ## 📜 授權協議 (License)
 
 本專案採用 [MIT License](LICENSE) 授權。
+
